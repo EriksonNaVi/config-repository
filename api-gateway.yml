@@ -1,9 +1,9 @@
 server:
-  port: 8093
+  port: 8083
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8092/eureka/
+      defaultZone: http://localhost:8082/eureka/
 spring:
   cloud:
     gateway:
