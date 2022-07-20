@@ -20,10 +20,22 @@ resilience4j.circuitbreaker:
             waitDurationInOpenState: 50s
             failureRateThreshold: 50
             eventConsumerBufferSize: 10
+            
+resilience4j.circuitbreaker:
+    instances:
+        numberAccountsCB:
+            #registerHealthIndicator: true
+            slidingWindowSize: 10
+            permittedNumberOfCallsInHalfOpenState: 3
+            slidingWindowType: TIME_BASED
+            minimumNumberOfCalls: 20
+            waitDurationInOpenState: 50s
+            failureRateThreshold: 50
+            eventConsumerBufferSize: 10
         
 resilience4j.timelimiter:
     instances:
-        creditCardsCB:
+        numberAccountsCB:
             timeoutDuration: 2s
             cancelRunningFuture: true
 
