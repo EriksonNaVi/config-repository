@@ -6,17 +6,16 @@ eureka:
       defaultZone: http://localhost:8082/eureka/
       
 resilience4j.circuitbreaker:
-
     instances:
         creditCardsCB:
-        #registerHealthIndicator: true
-        slidingWindowSize: 10
-        permittedNumberOfCallsInHalfOpenState: 3
-        slidingWindowType: TIME_BASED
-        minimumNumberOfCalls: 20
-        waitDurationInOpenState: 50s
-        failureRateThreshold: 50
-        eventConsumerBufferSize: 10
+            #registerHealthIndicator: true
+            slidingWindowSize: 10
+            permittedNumberOfCallsInHalfOpenState: 3
+            slidingWindowType: TIME_BASED
+            minimumNumberOfCalls: 20
+            waitDurationInOpenState: 50s
+            failureRateThreshold: 50
+            eventConsumerBufferSize: 10
         
 resilience4j.timelimiter:
     instances:
