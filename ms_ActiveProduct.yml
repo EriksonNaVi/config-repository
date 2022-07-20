@@ -3,4 +3,9 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8082/eureka/
+ 
+     defaultZone: http://localhost:8082/eureka/
+spring:
+    data:
+        mongodb:
+            uri: mongodb://localhost:27017/activeProduct
