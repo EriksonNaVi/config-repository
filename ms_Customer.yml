@@ -21,8 +21,6 @@ resilience4j.circuitbreaker:
             failureRateThreshold: 50
             eventConsumerBufferSize: 10
             
-resilience4j.circuitbreaker:
-    instances:
         numberAccountsCB:
             #registerHealthIndicator: true
             slidingWindowSize: 10
@@ -35,6 +33,10 @@ resilience4j.circuitbreaker:
         
 resilience4j.timelimiter:
     instances:
+        creditCardsCB:
+            timeoutDuration: 2s
+            cancelRunningFuture: true
+            
         numberAccountsCB:
             timeoutDuration: 2s
             cancelRunningFuture: true
