@@ -1,8 +1,6 @@
 server:
   port: 8006
-topic:
-    wallet:
-        name: wallet
+  
 eureka:
   client:
     service-url:
